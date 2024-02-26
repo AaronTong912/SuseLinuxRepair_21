@@ -39,7 +39,7 @@ def genRepairShellScript(needRepairArr, savePath, suseVersion="SUSE11"):
         f.write("#Email: aaron.tong2004@gmail.com" + '\n')
         f.write('logPath=`basename $0`.log\ntouch $logPath\n')  # Create a new log file for output
         for line in needRepairArr:
-            contentArr = line.split('|')  # Split into a five-column array 10.69.10.128--hubpvl-nocms-a01|service autostart postfix|off|on|no
+            contentArr = line.split('|')  # Split into a five-column array
             checkList = contentArr[1]  # Second column check item
             checkResult = contentArr[4]  # Fifth column for check result
             values = contentArr[3]  # Third column values
